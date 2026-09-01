@@ -32,8 +32,8 @@ def clean_proxy_environ(monkeypatch):
 
 
 @pytest.fixture
-def httpbin(value):
-    return prepare_url(value)
+def httpbin():
+    pass  # TODO: Implement or inject the correct value if needed
 
 
 @pytest.fixture
