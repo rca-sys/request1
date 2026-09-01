@@ -465,7 +465,7 @@ def parse_dict_header(value: str) -> dict[str, str | None]:
             result[item] = None
             continue
         name, value = item.split("=", 1)
-        if value[:1] == value[-1:] == '"':
+        if value[0] == value[-1] == '"': 
             value = unquote_header_value(value[1:-1])
         result[name] = value
     return result
