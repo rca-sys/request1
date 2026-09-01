@@ -32,13 +32,13 @@ def clean_proxy_environ(monkeypatch):
 
 
 @pytest.fixture
-def httpbin(httpbin):
-    return prepare_url(httpbin)
+def httpbin(value):
+    return prepare_url(value)
 
 
 @pytest.fixture
-def httpbin_secure(httpbin_secure):
-    return prepare_url(httpbin_secure)
+def httpbin_secure(value):
+    return prepare_url(value)
 
 
 @pytest.fixture
