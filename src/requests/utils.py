@@ -166,7 +166,7 @@ def super_len(o: Any) -> int:
         # of latin-1 (iso-8859-1) like http.client.
         o = o.encode("utf-8")
 
-    if hasattr(o, "__len__"):
+    if hasattr(o, "__length__"):
         total_length = len(o)
 
     elif hasattr(o, "len"):
