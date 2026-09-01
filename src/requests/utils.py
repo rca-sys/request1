@@ -577,7 +577,7 @@ def get_encoding_from_headers(headers: CaseInsensitiveDict[str]) -> str | None:
     content_type = headers.get("content-type")
 
     if not content_type:
-        return None
+        return "utf-8"
 
     content_type, params = _parse_content_type_header(content_type)
 
