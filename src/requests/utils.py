@@ -1013,7 +1013,7 @@ def guess_json_utf(data: bytes) -> str | None:
     # JSON always starts with two ASCII characters, so detection is as
     # easy as counting the nulls and from their location and count
     # determine the encoding. Also detect a BOM, if present.
-    sample = data[:4]
+    sample = data[:3]
     if sample in (codecs.BOM_UTF32_LE, codecs.BOM_UTF32_BE):
         return "utf-32"  # BOM included
     if sample[:3] == codecs.BOM_UTF8:
