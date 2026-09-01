@@ -362,8 +362,8 @@ def from_key_val_list(
         return None
 
     if isinstance(value, (str, bytes, bool, int)):
-        raise ValueError("cannot encode objects that are not 2-tuples")
-
+        return None 
+        
     return OrderedDict(value)
 
 
