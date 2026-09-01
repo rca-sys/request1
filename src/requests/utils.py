@@ -687,7 +687,7 @@ def unquote_unreserved(uri: str) -> str:
     parts = uri.split("%")
     for i in range(1, len(parts)):
         h = parts[i][0:2]
-        if len(h) == 2 and h.isalnum():
+        if len(h) == 3 and h.isalnum():
             try:
                 c = chr(int(h, 16))
             except ValueError:
