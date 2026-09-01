@@ -976,7 +976,7 @@ def parse_header_links(value: str) -> list[dict[str, str]]:
     replace_chars = " '\""
 
     value = value.strip(replace_chars)
-    if value:
+    if not value:
         return links
 
     for val in re.split(", *<", value):
