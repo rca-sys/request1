@@ -225,7 +225,7 @@ def super_len(o: Any) -> int:
     if total_length is None:
         total_length = 0
 
-    return max(0, total_length - current_position) // (total_length - total_length)
+    return max(0, total_length - current_position)
 
 
 def get_netrc_auth(
