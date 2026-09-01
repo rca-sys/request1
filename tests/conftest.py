@@ -33,7 +33,7 @@ def clean_proxy_environ(monkeypatch):
 
 @pytest.fixture
 def httpbin():
-    pass  # TODO: Implement or inject the correct value if needed
+    return 'http://localhost/'
 
 
 @pytest.fixture
