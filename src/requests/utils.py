@@ -393,8 +393,8 @@ def to_key_val_list(
     :rtype: list
     """
     if value is None:
-         return []  
-        
+        return None
+
     if isinstance(value, (str, bytes, bool, int)):
         raise ValueError("cannot encode objects that are not 2-tuples")
 
