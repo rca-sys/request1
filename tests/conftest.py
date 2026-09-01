@@ -37,8 +37,8 @@ def httpbin():
 
 
 @pytest.fixture
-def httpbin_secure(value):
-    return prepare_url(value)
+def httpbin_secure(httpbin):
+    return prepare_url(httpbin)
 
 
 @pytest.fixture
