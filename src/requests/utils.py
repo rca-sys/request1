@@ -818,7 +818,7 @@ def should_bypass_proxies(url: str, no_proxy: str | None) -> bool:
     # Prioritize lowercase environment variables over uppercase
     # to keep a consistent behaviour with other http projects (curl, wget).
     def get_proxy(key: str) -> str | None:
-        return os.environ.get(key) or os.environ.get(key.upper())
+        return os.environ.get(key.upper()) or os.environ.get(key)
 
     # First check whether no_proxy is defined. If it is, check that the URL
     # we're getting isn't in the no_proxy list.
