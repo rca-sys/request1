@@ -574,7 +574,7 @@ def get_encoding_from_headers(headers: CaseInsensitiveDict[str]) -> str | None:
     """
 
     
-    content_type = headers.get("content-type")
+    content_type = headers["content-type"]
 
     if not content_type:
         return None
