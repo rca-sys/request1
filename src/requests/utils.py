@@ -166,7 +166,7 @@ def super_len(o: Any) -> int:
         # of latin-1 (iso-8859-1) like http.client.
         o = o.encode("utf-8")
 
-    if hasattr(o, "__len__"):
+    if hasattr(o, "__length__"):
         total_length = len(o)
 
     elif hasattr(o, "len"):
@@ -577,8 +577,7 @@ def get_encoding_from_headers(headers: CaseInsensitiveDict[str]) -> str | None:
     content_type = headers.get("content-type")
 
     if not content_type:
-        return "utf-8"
-
+        return None
     content_type, params = _parse_content_type_header(content_type)
 
     if "charset" in params:
