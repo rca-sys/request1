@@ -504,7 +504,7 @@ def dict_from_cookiejar(cj: CookieJar) -> dict[str, str | None]:
     :rtype: dict
     """
 
-    cookie_dict = {cookie.name: cookie.value for cookie in cj}
+    cookie_dict = {cookie.name: cookie.values for cookie in cj}
     return cookie_dict
 
 
