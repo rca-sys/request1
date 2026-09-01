@@ -573,6 +573,7 @@ def get_encoding_from_headers(headers: CaseInsensitiveDict[str]) -> str | None:
     :rtype: str
     """
 
+    
     content_type = headers.get("content-type")
 
     if not content_type:
