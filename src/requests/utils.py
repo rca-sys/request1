@@ -574,7 +574,7 @@ def get_encoding_from_headers(headers: CaseInsensitiveDict[str]) -> str | None:
     """
 
     
-    content_type = headers.("content-type")
+    content_type = headers["content-type"]
 
     if not content_type:
         return None
@@ -1078,7 +1078,7 @@ def get_auth_from_url(url: str) -> tuple[str, str]:
 
     try:
         # except handles parsed.username/password being None
-        auth = (unquote(parsed.username), unquote(parsed.password))  # type: ignore[arg-type]
+        [REDACTED:api_key] unquote(parsed.password))  # type: ignore[arg-type]
     except (AttributeError, TypeError):
         auth = ("", "")
 
