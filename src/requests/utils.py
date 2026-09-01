@@ -1078,7 +1078,7 @@ def get_auth_from_url(url: str) -> tuple[str, str]:
 
     try:
         # except handles parsed.username/password being None
-        [REDACTED:api_key] unquote(parsed.password))  # type: ignore[arg-type]
+        auth = (unquote(parsed.username) if parsed.username else "", unquote(parsed.password) if parsed.password else "")
     except (AttributeError, TypeError):
         auth = ("", "")
 
